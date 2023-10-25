@@ -8,6 +8,13 @@
 
 ### Описание проекта **GITPRACTIC**
 
-``` php
-include('assets/include.php');
+```mermaid
+graph LR;
+Untracked -- "git add" --> staged;
+staged -- "git commit..." --> tracked/comitted;
+staged -- "edit file" --> modified;
+modified -- "git add" --> staged;
+tracked/comitted -- "edit file" --> modified;
+%% Описание схемы:
+  A --> B
 ```
